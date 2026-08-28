@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf9f6;
+  --color-sage: #7ca982;
+  --color-terracotta: #e07a5f;
+  --color-ink: #2c2a29;
+  --color-sage-light: #e4efe5;
+  --color-terracotta-light: #f7e6e1;
+  --color-border: #dedad5;
+  --color-white: #ffffff;
+
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-heading: 'Fraunces', serif;
+
+  /* Animation durations */
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+  --duration-700: 700ms;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom animation utilities (replaces tailwindcss-animate) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.duration-300 { animation-duration: 300ms; }
+.duration-500 { animation-duration: 500ms; }
+.duration-700 { animation-duration: 700ms; }
+
