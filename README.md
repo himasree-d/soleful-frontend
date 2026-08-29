@@ -37,4 +37,9 @@ The frontend relies on a separate Laravel API backend. By default, it connects t
 
 ## Deployment
 This project is configured to be deployed easily on [Vercel](https://vercel.com).
+
+## Demo Accounts
+- **Admin**: `admin@soleful.com` / `password`
+- **User**: `user@soleful.com` / `password` .
+  
 The `vercel.json` file is included to ensure that React Router works correctly (preventing 404 errors on page reloads).
