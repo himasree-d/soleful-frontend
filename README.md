@@ -1,16 +1,40 @@
-# React + Vite
+# Soleful Store (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Soleful is a premium, minimalist sneaker store built with React and Vite. It features a curated UI utilizing a warm color palette (cream, sage, terracotta, ink) and modern typography (Fraunces and DM Sans) to create a high-end shopping experience.
 
-Currently, two official plugins are available:
+## Features
+- **Hover-Cycle Gallery**: Seamlessly cycle through multiple angles of a sneaker by hovering over product cards.
+- **Lightbox**: View high-resolution imagery in a full-screen, zoomable modal on product pages.
+- **Cart & Checkout**: Real-time cart management with quantity adjustments.
+- **Authentication**: JWT-based login and registration.
+- **Admin Dashboard**: Manage and review all store orders, complete with item thumbnails and Accept/Reject status controls.
+- **Responsive**: Fully responsive design for mobile, tablet, and desktop.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- React 18
+- Vite
+- React Router DOM
+- Tailwind CSS v4
+- Axios
+- Lucide React (Icons)
 
-## React Compiler
+## Environment Setup
+The frontend relies on a separate Laravel API backend. By default, it connects to a production backend. To change this, update `src/api.js`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Running Locally
 
-## Expanding the Oxlint configuration
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open `http://localhost:5173` in your browser.
+
+## Deployment
+This project is configured to be deployed easily on [Vercel](https://vercel.com).
+The `vercel.json` file is included to ensure that React Router works correctly (preventing 404 errors on page reloads).
