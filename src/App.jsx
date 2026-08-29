@@ -8,6 +8,7 @@ import Cart from './pages/Cart'
 import CheckoutSuccess from './pages/CheckoutSuccess'
 import Orders from './pages/Orders'
 import Admin from './pages/Admin'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/checkout/success" element={<CheckoutSuccess />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </div>
